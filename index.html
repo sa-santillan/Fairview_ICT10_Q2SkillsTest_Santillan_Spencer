@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css"/>
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+</head>
+<body>
+    <div class="container">
+    <h1>Periodic Table Information Finder</h1>
+    <p>Enter an Element to search</p>
+
+    <input type="text" id="planet1" placeholder="Example: EARTH">
+
+    <br>
+    <button py-click="search_element">Search Element</button>
+    <div class="result">
+        <h3>Search Results</h3>
+<!-- Code, Name, Order, Moons-->
+        <p><b>Element Symbol:</b> <span id="code">-</span></p>
+        <p><b>Element Name:</b> <span id="name">-</span></p>
+        <p><b>Atomic Number:</b> <span id="order">-</span></p>
+        <p><b>Atomic Mass:</b> <span id="moons">-</span></p>
+        <span></span>
+
+        </div>
+<!--Connect Python File-->
+<script type="py" src="main.py"></script>
+</div>
+</body>
+</html>
