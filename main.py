@@ -23,7 +23,7 @@ nonmetals = {
 }
 
 # Function to search for a non-metal
-def search_element():
+def search_element(e):
     # Get the input from HTML
     Nonmetal1 = document.getElementById("nonmetal1").value.strip()
 
