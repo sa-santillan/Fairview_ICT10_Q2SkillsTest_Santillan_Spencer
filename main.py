@@ -1,7 +1,6 @@
-#Skills Test
-from pyscript import document
+# Skills Test
+from pyscript import document, when
 
-# Dictionary containing non-metal information
 nonmetals = {
     "H": ("Hydrogen", 1, 1.008),
     "He": ("Helium", 2, 4.002),
@@ -22,15 +21,12 @@ nonmetals = {
     "Rn": ("Radon", 86, 222)
 }
 
-# Function to search for a non-metal
-def search_element(e):
-    # Get the input from HTML
+def search_element(event):
+
     Nonmetal1 = document.getElementById("nonmetal1").value.strip()
 
-    # Retrieve information from dictionary
     result = nonmetals.get(Nonmetal1, ("Non-metal not found", "-", "-"))
 
-    # Display the result in HTML
     document.getElementById("symbol").innerText = Nonmetal1
     document.getElementById("name").innerText = result[0]
     document.getElementById("atomic_number").innerText = result[1]
